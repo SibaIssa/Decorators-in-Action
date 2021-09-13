@@ -3,15 +3,8 @@ This repository is part of an assignment for Software Design with Python [SDwP] 
 __________________________________________________________________________________________________________________________________________________________
 This main idea of this repository is to solve Four main tasks as it shown in the below structure:
 
+![sss](https://user-images.githubusercontent.com/51207510/133052391-ecd7d639-b36b-42fe-b005-95a9372a6440.png)
 
-├── src              <- directory for source files 
-|    ├── main.py     <- driver program file 
-|    ├── task1.py    <- task 1 implemented here 
-|    ├── task2.py    <- task 2 implemented here 
-|    ├── task3.py    <- task 2 implemented here
-|    └── task4.py    <- task 4 implemented here 
-│                               
-└── Readme.md
 
 - The First task is to Create a function decorator that calculates function execution time and the number of times the decorated function was called (function call trace).
 
