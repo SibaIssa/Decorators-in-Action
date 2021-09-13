@@ -9,7 +9,7 @@ This main idea of this repository is to solve Four main tasks:
 
 3- The third task is to implement the decorator behavior in tasks 1 & 2 using a class decorator.
 
-4- and the last task is to extend our program so that if a decorated function encounters an error it wouldn’t put it back into stdout. Instead, pipe the error stream into a log file together with a timestamp. __________________________________________________________________________________________________________________________________________________________
+4- and the last task is to extend our program so that if a decorated function encounters an error it wouldn’t put it back into stdout. Instead, pipe the error stream into a log file together with a timestamp. __________________________________________________________________________________________________________
 I implemented the methods that is covered on SDwP course by using Python 3.8. 
 
 You can open the src folder and find 5 .py files. Four files to solve main tasks and a 'main file' to test our tasks (I used 4 functions for testing process). You try it by yourself; just open the 'main file' and uncomment whatever you want.
