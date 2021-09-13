@@ -14,4 +14,4 @@ ________________________________________________________________________________
 
 I implemented the methods that is covered on SDwP course by using Python 3.8. 
 
-You can open the src folder and find 5 .py files. Four files to solve main tasks and a 'main file' to test our tasks (I used 4 functions for testing process). You try it by yourself; just open the 'main file' and uncomment whatever you want.
+If you open the 'src' folder you will find five '.py' files. Four files to solve main tasks and a 'main.py' file to test our tasks (I used Four functions for testing process). You can try it by yourself; just open the 'main.py' file and uncomment whatever you want.
