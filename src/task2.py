@@ -1,5 +1,5 @@
 import time
-from inspect import*	
+import inspect 
 
 def decorator2(func):
     count = 0
@@ -12,9 +12,9 @@ def decorator2(func):
         print(f'{func.__name__} call {count} executed in {time1} sec')
         print('Name:', func.__name__)
         print('Type:', type(func))
-        print('Sign:', func.__code__.co_varnames)
+        print('Sign:', inspect.signature(func))
         print('Args:', 'positional', args, 'key=worded', kwargs)
         print('Doc:', func.__doc__)
-        print('Source:', getsource(func))
+        print('Source:', inspect.getsource(func))
         print('Output:',func(*args, **kwargs))
     return wrapper 

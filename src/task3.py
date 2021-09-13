@@ -1,5 +1,5 @@
 import time
-from inspect import*	
+import inspect 	
 import contextlib 
 import io
 
@@ -12,30 +12,31 @@ class decorator3:
     def __call__(self, *args, **kwargs):
         self.calls += 1
         start = time.time()
-        self.func(*args, **kwargs)
+        
+        with contextlib.redirect_stdout(io.StringIO())as f:
+            self.func(*args, **kwargs)
         self.exce_time = time.time() - start
-        with open('output.txt', 'w') as w :
-            w.write(f"{self.func.__name__} call {self.count} executed in {exectime} sec")
+
+        with open ('Output.txt','w') as w:
+            w.write(f"{self.func.__name__} call {self.count} executed in {self.exec_time} sec")
             w.write('\n')
             w.write(f"Name:   {self.func.__name__}")
             w.write('\n')
             w.write(f"Type:   {type(self.func)}")
             w.write('\n')
-            w.write(f"Sign:   {signature(self.func)}")  
+            w.write(f"Sign:   {inspect.signature(self.func)}")  
             w.write('\n')            
             w.write(f"Args:   positional ({self.func.args}) key=worded ({self.func.kwargs})") 
             w.write('\n')            
             w.write(f"Doc:    {self.func.__doc__}")
             w.write('\n')            
-            w.write(getsource(self.func))
+            w.write(inspect.getsource(self.func))
             w.write('\n')            
             w.write(f"Output: {self.func(*args, **kwargs)}") 
             w.write('\n\n')
 
-    def Rank_table():
-        rank_table = dict(sorted(table.items(), key=lambda item: item[1]))
-        print("PROGRAM|RANK|TIME ELAPSED")
-        n = 1
-        for i in rank_table:
-            print(i,"\t", n, "\t", rank_table[i])
-            n+=1
+        if self.calls==4:   #This condition to print the table once all 4 functions are called
+            A=sorted(self.calls.items(),key = lambda x: (x[1],x[0]))
+            print("PROGRAM  |  RANK  |  TIME ELAPSED")
+            for i in range(len(A)):
+                print (A[i][0], '       ',i+1,'      ',A[i][1])                        

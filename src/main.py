@@ -3,6 +3,7 @@ import math
 from task1 import decorator1
 from task2 import decorator2
 from task3 import decorator3
+from task4 import decorator4
 
 #@decorator1
 #@decorator2

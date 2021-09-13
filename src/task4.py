@@ -12,7 +12,7 @@ def decorator4(func):
         start = time.time()
         try:    
             func(*args,**kwargs) 
-        except Exception:
+        except Exception as error:
             with open("log file.txt","a") as w:
                 w.write(f'{datetime.datetime.now().timestamp()}\n')
         else:           
