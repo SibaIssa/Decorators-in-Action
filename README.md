@@ -1,4 +1,5 @@
-#Decorators in action
+# Decorators in action
+
 This repository is part of an assignment for Software Design with Python [SDwP] course, in which we will try to exhaust all the characteristics of python.
 __________________________________________________________________________________________________________________________________________________________
 This main idea of this repository is to solve Four main tasks as it shown in the below structure:
