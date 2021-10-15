@@ -3,7 +3,7 @@ from io import StringIO
 from contextlib import redirect_stdout
 from inspect import signature, getsource
 
-class BestDecor:
+class decorator3:
     def __init__(self, func):
         self.calls = 0 # number of function calls
         self.func = func # function itself
